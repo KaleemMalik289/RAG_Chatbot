@@ -1,9 +1,6 @@
 # Environments
 .env
 
-# ChromaDB Vector Database Storage
-vector_db/
-
 # Python caching
 __pycache__/
 *.pyc
