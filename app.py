@@ -7,12 +7,6 @@ PROJECT_ROOT = str(Path(__file__).parent.absolute())
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-# Workaround for Python caching a global 'src' module (common issue in Streamlit environments)
-if "src" in sys.modules:
-    del sys.modules["src"]
-for key in list(sys.modules.keys()):
-    if key.startswith("src."):
-        del sys.modules[key]
 
 import streamlit as st
 from dotenv import load_dotenv
